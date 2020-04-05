@@ -1,0 +1,82 @@
+<div class="container-fluid bg-light vh-100">
+
+    <app-top-bar></app-top-bar>
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page"><a routerLink="/backoffice">Backoffice</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a routerLink="/backoffice/gestion-articles">Articles</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Edit Article</li>
+        </ol>
+    </nav>
+
+    <div class="row">
+        <div class="col-2 bg-light">
+            <app-menu-back></app-menu-back>
+        </div>
+        <div class="col-10 bg-light">
+            <div class="row mt-5">
+                <div class="submit-form col-6 mx-auto">
+                  <h3 class="text-dark">EDIT ARTICLE</h3>
+                  <mark><small>Since I couldn't figure out the update method, this form isn't working.</small></mark>
+                  <div *ngIf="!submitted" class="mt-5">
+                    <div class="form-group">
+                      <label for="title">Title</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="title"
+                        required
+                        [(ngModel)]="currentArticle.titre"
+                        name="title"
+                      />
+                    </div>
+                
+                    <div class="form-group">
+                      <label for="description">Description</label>
+                      <input
+                        class="form-control"
+                        id="description"
+                        required
+                        [(ngModel)]="currentArticle.contenu"
+                        name="description"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="price">Price</label>
+                      <input
+                        class="form-control"
+                        id="price"
+                        required
+                        [(ngModel)]="currentArticle.prix"
+                        name="price"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="price">Image [src]</label>
+                      <input
+                        class="form-control"
+                        id="img"
+                        required
+                        [(ngModel)]="currentArticle.img"
+                        name="img"
+                      />
+                    </div>
+                
+                    <button (click)="updateArticle()" class="btn myBtn">Edit article</button>
+                  </div>
+                
+                  <div *ngIf="submitted">
+                    <h4>Article edited successfuly !</h4>
+                    <button class="btn myBtn" (click)="newArticle()">Edit again</button>
+                  </div>
+                </div>
+
+              </div>
+
+        </div>
+    </div>
+
+
+
+</div>

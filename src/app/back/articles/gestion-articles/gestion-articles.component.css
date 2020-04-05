@@ -1,0 +1,22 @@
+.iconLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: turquoise;
+}
+.delete {
+    color: tomato;
+}
+.iconLink:hover {
+    color: teal;
+}
+.delete:hover {
+    color: darkred;
+}
+.material-icons {
+    font-size: 36px;
+}
+.breadcrumb li a {
+    color: darkturquoise;
+}
+

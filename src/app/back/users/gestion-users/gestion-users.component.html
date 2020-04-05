@@ -1,0 +1,66 @@
+<div class="container-fluid bg-light vh-100">
+
+    <app-top-bar></app-top-bar>
+    
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item" aria-current="page"><a routerLink="/backoffice">Backoffice</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Users</li>
+        </ol>
+    </nav>
+
+    <div class="row">
+        <div class="col-2 bg-light">
+            <app-menu-back></app-menu-back>
+        </div>
+        <div class="col-10 bg-light">
+            
+            
+            <div class="row mt-5">
+                <div class="col d-flex justify-content-between">
+                    <h3 class="ml-3 text-secondary">USERS</h3>
+                    <a routerLink="/backoffice/gestion-users/ajouter-user" class="iconLink mr-3">
+                        <i class="material-icons">add_circle</i>
+                        add user
+                    </a>
+                </div>
+                
+                
+                <table class="table table-striped table-bordered mt-2 mr-3">
+                    <thead>
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Account created</th>
+                        <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of users; let i = index">
+                        <th scope="row" data-toggle="tooltip" data-placement="top" title="Displays only the last 5 characters of the _id">{{user._id | slice:19:user._id.length}}</th>
+                        <td>{{user.nom}}</td>
+                        <td>{{user.prenom}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.role}}</td>
+                        <td>{{user.createdAt | date:'medium'}}</td>
+                        <td class="d-flex">
+                            <a [routerLink]="['/backoffice/gestion-users/modifier-user' , user._id]" class="iconLink">
+                                <i class="material-icons">create</i>
+                            </a>
+                            <span (click)="deleteUser(user , i)">
+                                <a routerLink="/backoffice/gestion-users" class="iconLink delete">
+                                    <i class="material-icons">remove_circle_outline</i>
+                                </a>
+                            </span>
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

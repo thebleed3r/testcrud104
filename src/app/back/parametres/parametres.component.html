@@ -1,0 +1,75 @@
+<div class="container-fluid bg-light vh-100">
+
+    <app-top-bar></app-top-bar>
+    
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item active" aria-current="page"><a routerLink="/backoffice">Backoffice</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Settings</li>
+      </ol>
+    </nav>
+  
+    <div class="row">
+      <div class="col-2 bg-light">
+  
+          <app-menu-back></app-menu-back>
+          
+      </div>
+      <div class="col-10 bg-light">
+          <div class="row mt-5">
+            <div class="submit-form col-6 mx-auto">
+              <h3 class="text-dark">GLOBAL SETTINGS</h3>
+              <mark><small>Since I couldn't figure out the update method, this form isn't working.</small></mark>
+              <div class="mt-5">
+                <div class="form-group">
+                  <label for="maxItems">Max items</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="maxItems"
+                    required
+                    name="maxItems"
+                    placeholder="{{params.nbMaxArticles}}"
+                  />
+                </div>
+            
+                <div class="form-group">
+                  <label for="seoMeta">SEO / Meta</label>
+                  <input
+                    class="form-control"
+                    id="seoMeta"
+                    required
+                    name="seoMeta"
+                    placeholder="{{params.seoMeta}}"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="siteHeading">Site Heading</label>
+                  <input
+                    class="form-control"
+                    id="siteHeading"
+                    required
+                    name="siteHeading"
+                    placeholder="{{params.textIntroduction}}"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="siteParagraph">Site Paragraph</label>
+                  <input
+                    class="form-control"
+                    id="siteParagraph"
+                    required
+                    name="siteParagraph"
+                    placeholder="{{params.titreHomepage}}"
+                  />
+                </div>
+                <button class="btn myBtn">Submit Settings</button>
+              </div>
+            </div>
+      </div>
+    </div>
+  
+  
+  
+  </div>
+  

@@ -1,0 +1,16 @@
+
+
+ul li h6 {
+    font-weight: 900;
+}
+
+ul li a {
+    color: #595959;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+ul li a:hover {
+    color: #f56358;
+}

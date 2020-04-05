@@ -1,0 +1,83 @@
+<div class="container-fluid bg-light vh-100">
+
+    <app-top-bar></app-top-bar>
+    
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item active" aria-current="page"><a routerLink="/backoffice">Backoffice</a></li>
+          <li class="breadcrumb-item active" aria-current="page"><a routerLink="/backoffice/gestion-users">Users</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Add User</li>
+      </ol>
+    </nav>
+  
+    <div class="row">
+      <div class="col-2 bg-light">
+  
+          <app-menu-back></app-menu-back>
+          
+      </div>
+      <div class="col-10 bg-light">
+          <div class="row mt-5">
+            <div class="submit-form col-6 mx-auto">
+              <h3 class="text-dark">ADD USER</h3>
+              <div *ngIf="!submitted">
+                <div class="form-group">
+                  <label for="name">Nom</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    required
+                    [(ngModel)]="user.nom"
+                    name="name"
+                  />
+                </div>
+            
+                <div class="form-group">
+                  <label for="lastName">Prenom</label>
+                  <input
+                    class="form-control"
+                    id="lastName"
+                    required
+                    [(ngModel)]="user.prenom"
+                    name="lastName"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    class="form-control"
+                    id="email"
+                    required
+                    [(ngModel)]="user.email"
+                    name="email"
+                  />
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+                    type="password"
+                      class="form-control"
+                      id="password"
+                      required
+                      [(ngModel)]="user.password"
+                      name="password"
+                    />
+                  </div>
+                <button (click)="addUser()" class="btn myBtn">Add user</button>
+              </div>
+            
+              <div *ngIf="submitted">
+                <h4 class="bg-primary">User submitted successfully!</h4>
+                <button class="btn myBtn" (click)="newUser()">Add new user</button>
+              </div>
+            </div>
+  
+          </div>
+      </div>
+    </div>
+  
+  
+  
+  </div>
+  

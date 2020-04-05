@@ -1,0 +1,51 @@
+
+.form-group {
+	color: #595959;
+}
+.form-control {
+	border: none;
+    border-bottom: 1px solid #eee;
+    border-radius: 0px;
+}
+.form-control:focus {
+	box-shadow: none;
+    border-bottom: 1px solid ;
+    border-radius: 0px;
+}
+.myBtn {
+	background: #d9d9d9;
+	border: 1px solid white;
+	color: #595959;
+	margin: auto;
+}
+.myBtn:hover, .myBtn:active, .myBtn:focus {
+	background: #f56358 !important;
+	border: 1px solid white !important;
+	color: white !important;
+	box-shadow: none !important;
+}
+.right-contact  {
+	margin-left: 20px;
+	color: #a6a6a6;
+}
+.right-contact i {
+	margin: 10px;
+	color: #a6a6a6;
+}
+.right-contact ul {
+	padding: 20px;
+}
+.myHeading {
+	font: normal 2rem "Raleway";
+	color: #595959;
+    text-transform: uppercase;
+    margin-top: 5rem;
+    padding: 0;
+}
+mark {
+	font-family: 'Lato';
+	color: #a6a6a6;
+}
+.right-contact ul li{
+    list-style-type: none;
+}

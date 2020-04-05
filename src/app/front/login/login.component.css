@@ -1,0 +1,36 @@
+* {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	text-decoration: none;
+}
+.myContainer {
+	margin-top: 10%;
+}
+.form-control {
+	border: none;
+	border-bottom: 1px solid #eee;
+}
+#basic-addon1 {
+	background: none;
+	border: none;
+}
+.form-control:focus {
+	box-shadow: none;
+	border-bottom: 1px solid ;
+}
+.login {
+    color: dimgray;
+    background: whitesmoke;
+    padding: 7px 10px;
+    border-radius: 5px;
+    transition: all ease .4s;
+}
+.login:hover {
+	color: white;
+    text-decoration: none;
+    background: #f56358;
+}
+a, a:hover {
+	text-decoration: none;
+}

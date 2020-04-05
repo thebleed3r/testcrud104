@@ -1,0 +1,35 @@
+<app-menu></app-menu>
+<div class="container ourProducts">
+    <h1 class="text-center myHeading">Flannel Shirts</h1>
+    <p class="text-center text-reset font-weight-light"><mark>Our shirts are 100% bio cotton</mark></p> 
+    <div class="row">
+        <div class="col-12 mt-3" *ngFor="let article of articles">
+            <div class="card">
+                <div class="card-horizontal">
+                    <div class="img-square-wrapper">
+                        <a [routerLink]="['/article', article._id]"> 
+                            <img class="img-fluid pt-3" [src]="article.img" alt="Card image cap">
+                        </a>
+                        <span>{{ article.prix }}</span>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">{{ article.titre }}</h4>
+                        <p class="card-text text-muted">{{ article.contenu }}</p>
+                        <div class="d-flex ">
+                            <a href="" class="btnAjouterPanier">
+                                <i class="material-icons">credit_card</i>
+                                Buy it</a>
+                        <p class="text-dark pt-2 ml-3">Click the image to see more.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Posted by {{ article.auteur }}, on {{ article.dateCreation | date }}</small>                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
+

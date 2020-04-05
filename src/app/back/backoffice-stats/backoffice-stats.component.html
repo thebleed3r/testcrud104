@@ -1,0 +1,26 @@
+<div class="row mt-5">
+  <div class="col-md-6">
+    <div class="jumbotron">
+      <h1 class="display-4">Articles Statistics</h1>
+      <p class="lead">(This is my first MEAN Stack App.)</p>
+      <hr class="my-4">
+      <p>A request is sent to the database in order to get all the articles. The number displayed below is dynamic.</p>
+      <p class="bg-success d-inline text-light">{{articles.length}} articles listed in the database.</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-sm" routerLink="/backoffice/gestion-articles" role="button">Go to Articles</a>
+      </p>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="jumbotron">
+      <h1 class="display-4">Users Statistics</h1>
+      <p class="lead">(The CRUD is not working, just the CRD)</p>
+      <hr class="my-4">
+      <p>A request is sent to the database in order to get all the userd. The number displayed below is dynamic.</p>
+      <p class="bg-success d-inline text-light">{{users.length}} users listed in the database.</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-sm"routerLink="/backoffice/gestion-users" role="button">Go to Users</a>
+      </p>
+    </div>
+  </div>
+</div>
